@@ -8,13 +8,17 @@ public:
     string bname;
     int noc;
 
-    void input() {
+    void input(int bookNumber) {
+        cout << "enter book " << bookNumber << " id: ";
         cin >> id;
+        cout << "enter book " << bookNumber << " name: ";
         cin >> bname;
+        cout << "enter book " << bookNumber << " no of copies: ";
         cin >> noc;
     }
 
-    void display() {
+    void display(int bookNumber) {
+        cout << "\n--- Book " << bookNumber << " Details ---" << endl;
         cout << "id of the book= " << id << endl;
         cout << "name of the book= " << bname << endl;
         cout << "no of copies= " << noc << endl;
@@ -24,20 +28,17 @@ public:
 int main() {
     lab b1, b2;
 
-    // Book 1 Input
-    cout << "enter book 1 id, name, and no of copies: " << endl;
-    b1.input();
+    // Input for Book 1
+    b1.input(1);
+    
+    cout << endl;
 
-    // Book 2 Input
-    cout << "enter book 2 id, name, and no of copies: " << endl;
-    b2.input();
+    // Input for Book 2
+    b2.input(2);
 
-    cout << "\n--- Displaying Details ---" << endl;
-    cout << "Book 1 Details:" << endl;
-    b1.display();
-
-    cout << "\nBook 2 Details:" << endl;
-    b2.display();
+    // Display details for both books
+    b1.display(1);
+    b2.display(2);
 
     return 0;
 }
