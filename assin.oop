@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class lab {
+public:
+    int id;
+    string bname;
+    int noc;
+
+    void input() {
+        cin >> id;
+        cin >> bname;
+        cin >> noc;
+    }
+
+    void display() {
+        cout << "id of the book= " << id << endl;
+        cout << "name of the book= " << bname << endl;
+        cout << "no of copies= " << noc << endl;
+    }
+};
+
+int main() {
+    lab b1, b2;
+
+    // Book 1 Input
+    cout << "enter book 1 id, name, and no of copies: " << endl;
+    b1.input();
+
+    // Book 2 Input
+    cout << "enter book 2 id, name, and no of copies: " << endl;
+    b2.input();
+
+    cout << "\n--- Displaying Details ---" << endl;
+    cout << "Book 1 Details:" << endl;
+    b1.display();
+
+    cout << "\nBook 2 Details:" << endl;
+    b2.display();
+
+    return 0;
+}
