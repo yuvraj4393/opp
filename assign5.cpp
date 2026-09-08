@@ -25,7 +25,7 @@ using namespace std;
  };
  int main()
  {
-    student s1("Adityaraj",31);
+    student s1("yuvraj",19);
     s1.display();
     return 0;
  }
